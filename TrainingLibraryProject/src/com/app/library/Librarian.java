@@ -10,9 +10,9 @@ public class Librarian {
 
 	public void validate() {
 		try {
-			System.out.println("Enter Name");
-			String nm = scan.next();
-			if (nm.equalsIgnoreCase("admin")) {
+			System.out.println("Enter Mail");
+			String lMail = scan.next();
+			if (lMail.equalsIgnoreCase("admin")) {
 				System.out.println("Enter Password");
 				int pw = scan.nextInt();
 				if (pw == 123) {
@@ -33,7 +33,7 @@ public class Librarian {
 					System.out.println("Incorrect Password");
 				}
 			} else {
-				System.out.println("Cannot Login with name" + nm);
+				System.out.println("Cannot Login with name" + lMail);
 			}
 		} // try
 		catch (Exception e) {
