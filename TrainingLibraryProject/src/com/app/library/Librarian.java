@@ -17,7 +17,17 @@ public class Librarian {
 				if (pw == 123) {
 					System.out.println("Welcome admin");
 					System.out.println("What operation You want to perform : ");
-					addBook();
+					System.out.println("1. Add Books \n 2.View Books");
+					int choice = scan.nextInt();
+					switch (choice) {
+					case 1:
+						addBook();
+					case 2:
+						showAllBook();
+					default:
+						System.out.println("Not a valid choice");
+					}// switch
+
 				} else {
 					System.out.println("Incorrect Password");
 				}
