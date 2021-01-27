@@ -1,10 +1,10 @@
 package com.app.library;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-
-public class Librarian {
+public class Librarian implements LibrarianDao{
 	public static Scanner scan = new Scanner(System.in);
 	public static ArrayList<BookData> a1 = null;
 
@@ -23,8 +23,11 @@ public class Librarian {
 					switch (choice) {
 					case 1:
 						addBook();
+						break;
+						
 					case 2:
-						showAllBook();
+						showAllBooks();
+						break;
 					default:
 						System.out.println("Not a valid choice");
 					}// switch
@@ -40,6 +43,8 @@ public class Librarian {
 			e.printStackTrace();
 		}
 	}// validate
+
+//Method to a book by librarian
 
 	public void addBook() {
 		System.out.println("How many Books you want to add: ");
@@ -59,14 +64,15 @@ public class Librarian {
 			BookData bd1 = new BookData(bName, bSubject, bAuthor, bPrice, pageNo);
 			a1.add(bd1);
 			System.out.println("Successfully  Book Added " + i);
-
 		} // for
-
 	}// addbook
-
-	public void showAllBook() {
-		for (int i = 1; i <= a1.size(); i++) {
-			System.out.println(a1.get(i));
-		} // for
-	}// show AllBook*/
+	
+	//view all Books Method
+	@Override
+	public List<BookData> showAllBooks() {
+		BookData bd2=new BookData("Cisco","Networking","Charles",450,200);
+		a1.add(bd2);
+		System.out.println(a1);
+		return a1;
+	}
 }

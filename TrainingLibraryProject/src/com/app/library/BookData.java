@@ -17,8 +17,8 @@ public class BookData {
 
 	@Override
 	public String toString() {
-		return "BookData [Book Name =" + bName + ", BookSubject =" + bSubject + ", Book Author=" + bAuthor + ", Book Price="
-				+ bPrice + ", Book Pages=" + pageNo + "]";
+		return "Book Name =" + bName + ", Subject =" + bSubject + ",  Author=" + bAuthor + ", Price="
+				+ bPrice + ", Pages=" + pageNo + " ";
 	}
 
 

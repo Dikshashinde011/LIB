@@ -10,7 +10,6 @@ public class Student {
 //sign up student
 	public void registerStudent() {
 		a2 = new ArrayList<StudentSignup>();
-
 		System.out.println("Fill In Your Details ");
 		System.out.println("Enter Your Name");
 		String sName = scan.next();
@@ -22,7 +21,7 @@ public class Student {
 		String sPassword = scan.next();
 		System.out.println("Enter Your Mobile Number");
 		double sMobile = scan.nextDouble();
-		System.out.println("Enter Your Year");
+		System.out.println("In which Year do you study");
 		int sYear = scan.nextInt();
 		StudentSignup register = new StudentSignup(sName, sBranch, sMail, sPassword, sMobile, sYear);
 		a2.add(register);
@@ -43,7 +42,7 @@ public class Student {
 		} // if
 		else {
 			System.out.println(sEmail + "Email Id is not registered with us");
-		}
-	}
+		} // else
+	}// method
 
-}
+}// close class
